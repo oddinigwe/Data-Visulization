@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://topepo.github.io/caret/visualizations.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The caret Package</title>
+  <meta name="description" content="Documentation for the &lt;code&gt;caret&lt;/code&gt; package">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="The caret Package">
+  <meta property="og:type" content="book">
+  
+  
+  <meta property="og:description" content="Documentation for the &lt;code&gt;caret&lt;/code&gt; package">
+  <meta name="github-repo" content="&lt;a href=" https:="" github.com="" topepo="" caret"="" class="uri"><style></style><script type="text/javascript" src="./Visualization_files/MathJax.js.download"></script><style type="text/css" nonce="5973478DE858C94AAAF60C839A360CF7">#AD_Top,#AD_banner,#AdColumn,#AdContainer,#AdHeader,#AdImage,#Adcode,#AdvertiseFrame,#Advertisements,#BottomAdContainer,#BottomAds,#ContentAd,#PreRollAd,#RightAdBlock,#TopAd,#WNAd41,#ad-area,#ad-background,#ad-bg,#ad-bottom,#ad-container,#ad-header,#ad-header-728x90,#ad-leaderboard,#ad-main,#ad-panel,#ad-right,#ad-rotator,#ad-text,#ad-top,#ad-top-banner-placeholder,#ad-top-wrapper,#ad-unit,#ad-wrapper,#ad468,#ad728,#ad728x90,#adBanner,#adBelt,#adComponentWrapper,#adDiv,#adFrame,#adGallery,#adHeader,#adHolder,#adLayer,#adLeader,#adPosition0,#adText,#ad_1,#ad_2,#ad_3,#ad_4,#ad_5,#ad_728_90,#ad_area,#ad_banner,#ad_center,#ad_content,#ad_header,#ad_leaderboard,#ad_main,#ad_overlay,#ad_space,#ad_square,#ad_table,#ad_topslot,#ad_unit,#ad_wrap,#ad_wrapper,#adaptv_ad_player_div,#adbackground,#adbanner,#adbar,#adblock,#adboard,#adbody,#adbox,#adcode,#adcontainer,#adcontainer1,#adcontent,#adhead,#adheader,#adimg1,#adlayer,#adnews,#adposition3,#adright,#ads-col,#ads-wrapper,#ads1,#adsHeader,#ads_bottom,#ads_right,#ads_top,#ads_wrapper,#adsdiv,#adsense,#adsense_block,#adsense_inline,#adsensewide,#adspace,#adspace_top,#adspot-300x250-pos-1,#adspot-300x250-pos-2,#adstop,#adtext,#adtop,#adv-masthead,#adv-top,#advert1,#advert2,#advertContainer,#advert_box,#advertise,#advertisement1,#advertisetop,#advertising_wrapper,#adverts,#advtop,#adwrapper,#banner-ad,#bannerAd,#bannerAdWrapper,#banner_topad,#bannerad,#bigAd,#bigad,#body_ad,#bottomAd,#bottomAds,#bottom_ad,#centerads,#cmn_ad_tag_head,#companionAd,#content-header-ad,#contentAd,#content_ads,#content_adv,#contentad,#ctlDisplayAd1_lblAd,#dart-container-728x90,#dfp_ad_Entry_728x90,#dfp_ad_Home_728x90,#divAd,#div_prerollAd_1,#download_ad,#featuread,#featured-ads,#featuredAds,#footer_ad,#footer_ads,#game-ad,#googlead,#gridAdSidebar,#head-ad,#header-ads,#headerAd,#headerAdContainer,#header_ad,#homead,#ka_adRightSkyscraperWide,#leaderAd,#leaderBoardAd,#leaderboard-ad,#leaderboard-advertisement,#leaderboardad,#left-ad,#left_ads,#leftad,#leftads,#logoAd,#logo_ad,#mainAd,#main_ad,#mpu2,#mpu2_container,#mpu_container,#msad,#my-adsFPAD,#myAd,#player_ads,#pre_advertising_wrapper,#prerollAd,#promo-ad,#publicidad,#reklama,#rh-ad,#right_ads,#right_adsense,#search-sponsor,#searchAd,#search_ads,#sideAd,#side_ads,#sidebar-ads,#sidebar_ad,#sidebar_ads,#skybox-ad,#sponsorAdDiv,#sponsorText,#sponsoredwellcontainerbottom,#sponsors-home,#takeover_ad,#text-ads,#theAd,#top-ad,#top-ad-content,#topAd,#topAdSpace,#topAdSpace_div,#topAdvert,#topBannerAd,#top_ad,#top_ads,#topad,#topadvert,#topbannerad,#under_story_ad,#videoAd,#videoads,.ADBAR,.AdBar,.AdBody:not(body),.AdBox,.AdInfo,.AdSidebar,.AdTitle,.AdvertContainer,.HomeAds,.IM_ad_unit,.LazyLoadAd,.RelatedAds,.SponsoredContent,.ad-300x250,.ad-970,.ad-banner,.ad-block,.ad-body,.ad-border,.ad-btn,.ad-button,.ad-cat,.ad-cell,.ad-display,.ad-enabled,.ad-header,.ad-holder,.ad-img,.ad-inner,.ad-item,.ad-leader-top,.ad-leaderboard,.ad-left,.ad-link,.ad-links,.ad-loaded,.ad-panel,.ad-placement,.ad-rail,.ad-right,.ad-row,.ad-scroll,.ad-section,.ad-served,.ad-sidebar,.ad-source,.ad-square,.ad-stack,.ad-text,.ad-top,.ad-unit,.ad-unit-300-wrapper,.ad-vertical-container,.ad-wide,.ad-wrap,.ad-wrapper,.ad300,.ad468,.ad728,.ad90,.adBar,.adBlock,.adBottomBoard,.adBox,.adChoicesLogo,.adContent,.adDiv,.adElement,.adFrame,.adFrameCnt,.adHead,.adHeader,.adHeaderblack,.adHeadline,.adHolder,.adHoldert,.adImg,.adItem,.adLink,.adMessage,.adMiddle,.adMod,.adModule,.adOverlay,.adPanel,.adPod,.adResult,.adRight,.adRotator,.adSpace,.adSpot,.adText,.adTitle,.adTopHome,.adWidget,.adWrap,.ad_1,.ad_160,.ad_160x600,.ad_2,.ad_3,.ad_728x90,.ad_960,.ad_Right,.ad_block,.ad_body,.ad_bottom,.ad_container,.ad_description,.ad_global_header,.ad_head_rectangle,.ad_header,.ad_img,.ad_item,.ad_leaderboard,.ad_middle,.ad_outer,.ad_promo,.ad_slug_table,.ad_space,.ad_spot,.ad_text,.ad_title,.ad_trick_header,.ad_trick_left,.ad_wrap,.ad_wrapper,.adarea,.adbanner,.adbar,.adbottom,.adbutton,.adcolumn,.adcont,.addiv,.adframe,.adfree,.adheader,.adholder,.adinfo,.adkit,.adlink,.adlist,.admain,.admiddle,.adright,.adrow1,.adrow2,.ads-1,.ads-2,.ads-3,.ads-300-250,.ads-area,.ads-bg,.ads-col,.ads-header,.ads-holder,.ads-inline,.ads-item,.ads-right,.ads-section,.ads-title,.ads-top,.ads1,.adsBlock,.adsWidget,.ads_catDiv,.ads_div,.ads_top,.ads_wrapper,.adsbottombox,.adsbox,.adsbygoogle,.adscontainer,.adshome,.adside,.adslot,.adslot_blurred,.adspace,.adtable,.adtile,.adtop,.adv300,.adv_300,.adv_txt,.advert-block,.advert-box,.advert-container,.advert-content,.advert-horizontal,.advert-wrapper,.advert2,.advertColumn,.advertContainer,.advertLink,.advertText,.advert_area,.advert_container,.advert_list,.advertbox,.advertisement-1,.advertisement-block,.advertiser,.advertising_banner,.advertising_block,.advertisment,.advertorial,.adverts,.adverttext,.adwords,.afs_ads,.after-post-ad,.article-advert,.article_ad,.b-advert,.banner-ad,.banner-ads,.banner160x600,.banner300,.bannerAd,.banner_728x90,.banner_ad,.bannerad,.block-ad,.block-ec_ads,.block-simpleads,.blog-ads,.bottom-ad,.bottom-ads,.bottom-left-ad,.bottomAds,.bottom_ad_block,.box-ads,.box-radvert,.box-recommend-ad,.box_ads,.box_adv,.boxad,.boxadv,.btn-ad,.can_ad_slug,.category-ad,.change_AdContainer,.chitikaAdBlock,.commerce-inset,.container_ad,.container_row_ad,.contentAd,.contentAds,.content_ads,.content_tagsAdTech,.cp-adsInited,.custom-ad,.desktop-ad,.dfp-ad,.dfp-ad-unit,.dfp-tag-wrapper,.displayAd,.download_ad,.easyazon-block,.ec-ads-remove-if-empty,.featured-ad,.featuredAdBox,.flash-advertisement,.footer-ad,.footer-ads,.footer_ad,.footerad,.forumAd,.gallery-ad,.google-sponsored,.googleAdSense,.googleAds,.greyAd,.has-ad,.hasads,.header-ad,.headerAd,.header_ad,.header_ad_center,.header_advert,.headerad,.headerads,.home-ad,.home-ads,.homeAd,.homead,.homepage-ad,.homepage_ads,.horizontal_ad,.img_ad,.imgad,.inner_ad,.innerad,.insert-post-ads,.interstitial_ad_wrapper,.ipsAd,.item-ads,.item-container-ad,.js-sticky-ad,.leaderboard-ad,.leaderboard-ads,.leftAd,.leftad,.list-ad,.list-ads,.listad,.logo-ad,.marketing-ad,.mid_ad,.middle_AD,.mod-adopenx,.module-ad,.nav-ad,.newsAd,.node-ad,.oasad,.oio-banner-zone,.openx,.overlay-ads,.page-ad,.page_ad,.pfAd,.plainAd,.playerAd,.player_ad,.player_hover_ad,.pm-ad,.post-ad,.post-sponsored,.post_ad,.postad,.premiumAdOverlay,.premiumAdOverlayClose,.promoAd,.pub_300x250,.pub_300x250m,.pub_728x90,.publicidade,.pushdown-ad,.rail-ad,.rbRectAd,.rectangle_ad,.refreshAds,.region-top-ad-position,.reklam,.reklama,.reportAdLink,.resultad,.review-ad,.right-ad,.rightAd,.right_ad,.right_ads_column,.rightad,.rightadv,.searchAds,.searchad,.searchads,.section-sponsor,.showAd,.side-ad,.side-bar-ad-position1,.sideAd,.sidebar-ads,.single-ad,.singleAd,.skinAd,.sky_ad,.skyscraperAd,.slide-ad,.smallAd,.small_ad,.smallads,.sponsor-box,.sponsor-logo,.sponsorBlock,.sponsorBottom,.sponsoredLinks,.sponsorlink,.sticky-ad,.story-ad,.taboola-ad,.tc_ad_unit,.td-ad,.td-header-ad-wrap,.text-ad,.text-ad-links,.text-ads,.textAd,.text_ad,.text_ads,.textad,.textads,.top-ad,.top-ad-container,.top-ad-content,.top-ad-wrapper,.top-advert,.topAds,.top_ad,.top_ad_div,.top_ad_wrap,.top_ads,.topads,.tower-ad,.trc-content-sponsored,.trc_rbox .syndicatedItem,.trc_rbox_border_elm .syndicatedItem,.trc_rbox_div .syndicatedItem,.trc_related_container div[data-item-syndicated="true"],.type_ads_default,.view_ad,.wideAd,.withAds,.wnad,.wpInsertInPostAd,.yom-ad,[href^="http://join.seemygf.com/track/"],[href^="http://myalternativegflink.com/track/"],[href^="http://secure.18exgfs.com/track/"],[href^="http://secure.badassgirlfriends.com/track/"],[href^="http://secure.chatrevenge.com/track/"],[href^="http://secure.fubilov.com/track/"],[href^="http://secure.hotgfvideos.com/track/"],[href^="http://secure.mynngf.com/track/"],[href^="http://secure.obsessedwithmyself.com/track/"],[href^="http://secure.slutswithphones.com/track/"],[href^="http://secure.watchmygf.com/track/"],a[href*=".trust.zone"],a[href*="/adrotate-out.php?"],a[href*="marketgid.com/"],a[href*="medicinetizer.ru"],a[href*="runetki.com"],a[href^="http://ad-emea.doubleclick.net/"],a[href^="http://ad.doubleclick.net/"],a[href^="http://adfarm.mediaplex.com/"],a[href^="http://ads.betfair.com/redirect.aspx?"],a[href^="http://adserving.unibet.com/"],a[href^="http://adultfriendfinder.com/p/register.cgi?pid="],a[href^="http://affiliate.coral.co.uk/processing/"],a[href^="http://marketgid.com"],a[href^="http://mgid.com/"],a[href^="http://online.ladbrokes.com/promoRedirect?"],a[href^="http://pubads.g.doubleclick.net/"],a[href^="http://us.marketgid.com"],a[href^="http://www.adskeeper.co.uk/"],a[href^="http://www.fbooksluts.com/"],a[href^="http://www.fleshlight.com/"],a[href^="http://www.liutilities.com/"],a[href^="http://www.socialsex.com/"],a[href^="http://www.yourfuckbook.com/?"],div[id^="MarketGid"],div[id^="advads-"],div[id^="dfp-ad-"],div[id^="div-gpt-ad"],div[id^="google_ads_iframe_"],div[itemtype="http://schema.org/WPAdBlock"],iframe[id^="google_ads_frame"],iframe[id^="google_ads_iframe"],iframe[src^="http://ad.yieldmanager.com/"] {display: none !important; color: #93e41c !important; background-color: #6e2091 !important;}</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head><body><div id="MathJax_Message" style="display: none;"></div>https://github.com/topepo/caret" /&gt;
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The caret Package">
+  
+  <meta name="twitter:description" content="Documentation for the &lt;code&gt;caret&lt;/code&gt; package">
+  
+
+<meta name="author" content="Max Kuhn">
+
+
+<meta name="date" content="2017-09-04">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="http://topepo.github.io/caret/index.html">
+<link rel="next" href="http://topepo.github.io/caret/pre-processing.html">
+<link rel="stylesheet" crossorigin="anonymous" href="./Visualization_files/main.css"><script src="./Visualization_files/jquery.min.js.download"></script>
+<link href="./Visualization_files/style.css" rel="stylesheet">
+<link href="./Visualization_files/plugin-bookdown.css" rel="stylesheet">
+<link href="./Visualization_files/plugin-highlight.css" rel="stylesheet">
+<link href="./Visualization_files/plugin-search.css" rel="stylesheet">
+<link href="./Visualization_files/plugin-fontsettings.css" rel="stylesheet">
+
+
+
+
+
+
+
+<script src="./Visualization_files/htmlwidgets.js.download"></script>
+<script src="./Visualization_files/datatables.js.download"></script>
+<link href="./Visualization_files/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="./Visualization_files/dataTables.bootstrap.extra.css" rel="stylesheet">
+<script src="./Visualization_files/jquery.dataTables.min.js.download"></script>
+<script src="./Visualization_files/dataTables.bootstrap.min.js.download"></script>
+<script src="./Visualization_files/d3.min.js.download"></script>
+<script src="./Visualization_files/forceNetwork.js.download"></script>
+<script src="./Visualization_files/plotly.js.download"></script>
+<script src="./Visualization_files/typedarray.min.js.download"></script>
+<link href="./Visualization_files/crosstalk.css" rel="stylesheet">
+<script src="./Visualization_files/crosstalk.min.js.download"></script>
+<link href="./Visualization_files/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="./Visualization_files/plotly-latest.min.js.download"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+
+
+
+
+
+
+  <div class="book without-animation with-summary   font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary"><div class="book-search" role="search"><input type="search" class="form-control" placeholder="Type to search"></div>
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="http://topepo.github.io/caret/index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter active" data-level="2" data-path="visualizations.html"><a href="http://topepo.github.io/caret/visualizations.html"><i class="fa fa-check"></i><b>2</b> Visualizations</a></li>
+<li class="chapter" data-level="3" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html"><i class="fa fa-check"></i><b>3</b> Pre-Processing</a><ul style="display: none;">
+<li class="chapter" data-level="3.1" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#creating-dummy-variables"><i class="fa fa-check"></i><b>3.1</b> Creating Dummy Variables</a></li>
+<li class="chapter" data-level="3.2" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#zero--and-near-zero-variance-predictors"><i class="fa fa-check"></i><b>3.2</b> Zero- and Near Zero-Variance Predictors</a></li>
+<li class="chapter" data-level="3.3" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#identifying-correlated-predictors"><i class="fa fa-check"></i><b>3.3</b> Identifying Correlated Predictors</a></li>
+<li class="chapter" data-level="3.4" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#linear-dependencies"><i class="fa fa-check"></i><b>3.4</b> Linear Dependencies</a></li>
+<li class="chapter" data-level="3.5" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#the-preprocess-function"><i class="fa fa-check"></i><b>3.5</b> The <code>preProcess</code> Function</a></li>
+<li class="chapter" data-level="3.6" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#centering-and-scaling"><i class="fa fa-check"></i><b>3.6</b> Centering and Scaling</a></li>
+<li class="chapter" data-level="3.7" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#imputation"><i class="fa fa-check"></i><b>3.7</b> Imputation</a></li>
+<li class="chapter" data-level="3.8" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#transforming-predictors"><i class="fa fa-check"></i><b>3.8</b> Transforming Predictors</a></li>
+<li class="chapter" data-level="3.9" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#putting-it-all-together"><i class="fa fa-check"></i><b>3.9</b> Putting It All Together</a></li>
+<li class="chapter" data-level="3.10" data-path="pre-processing.html"><a href="http://topepo.github.io/caret/pre-processing.html#class-distance-calculations"><i class="fa fa-check"></i><b>3.10</b> Class Distance Calculations</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-splitting.html"><a href="http://topepo.github.io/caret/data-splitting.html"><i class="fa fa-check"></i><b>4</b> Data Splitting</a><ul style="display: none;">
+<li class="chapter" data-level="4.1" data-path="data-splitting.html"><a href="http://topepo.github.io/caret/data-splitting.html#simple-splitting-based-on-the-outcome"><i class="fa fa-check"></i><b>4.1</b> Simple Splitting Based on the Outcome</a></li>
+<li class="chapter" data-level="4.2" data-path="data-splitting.html"><a href="http://topepo.github.io/caret/data-splitting.html#splitting-based-on-the-predictors"><i class="fa fa-check"></i><b>4.2</b> Splitting Based on the Predictors</a></li>
+<li class="chapter" data-level="4.3" data-path="data-splitting.html"><a href="http://topepo.github.io/caret/data-splitting.html#data-splitting-for-time-series"><i class="fa fa-check"></i><b>4.3</b> Data Splitting for Time Series</a></li>
+<li class="chapter" data-level="4.4" data-path="data-splitting.html"><a href="http://topepo.github.io/caret/data-splitting.html#simple-splitting-with-important-groups"><i class="fa fa-check"></i><b>4.4</b> Simple Splitting with Important Groups</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html"><i class="fa fa-check"></i><b>5</b> Model Training and Tuning</a><ul style="display: none;">
+<li class="chapter" data-level="5.1" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#model-training-and-parameter-tuning"><i class="fa fa-check"></i><b>5.1</b> Model Training and Parameter Tuning</a></li>
+<li class="chapter" data-level="5.2" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#an-example"><i class="fa fa-check"></i><b>5.2</b> An Example</a></li>
+<li class="chapter" data-level="5.3" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#basic-parameter-tuning"><i class="fa fa-check"></i><b>5.3</b> Basic Parameter Tuning</a></li>
+<li class="chapter" data-level="5.4" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#notes-on-reproducibility"><i class="fa fa-check"></i><b>5.4</b> Notes on Reproducibility</a></li>
+<li class="chapter" data-level="5.5" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#customizing-the-tuning-process"><i class="fa fa-check"></i><b>5.5</b> Customizing the Tuning Process</a><ul style="display: none;">
+<li class="chapter" data-level="5.5.1" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#pre-processing-options"><i class="fa fa-check"></i><b>5.5.1</b> Pre-Processing Options</a></li>
+<li class="chapter" data-level="5.5.2" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#alternate-tuning-grids"><i class="fa fa-check"></i><b>5.5.2</b> Alternate Tuning Grids</a></li>
+<li class="chapter" data-level="5.5.3" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#plotting-the-resampling-profile"><i class="fa fa-check"></i><b>5.5.3</b> Plotting the Resampling Profile</a></li>
+<li class="chapter" data-level="5.5.4" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#the-traincontrol-function"><i class="fa fa-check"></i><b>5.5.4</b> The <code>trainControl</code> Function</a></li>
+<li class="chapter" data-level="5.5.5" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#alternate-performance-metrics"><i class="fa fa-check"></i><b>5.5.5</b> Alternate Performance Metrics</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#choosing-the-final-model"><i class="fa fa-check"></i><b>5.6</b> Choosing the Final Model</a></li>
+<li class="chapter" data-level="5.7" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#extracting-predictions-and-class-probabilities"><i class="fa fa-check"></i><b>5.7</b> Extracting Predictions and Class Probabilities</a></li>
+<li class="chapter" data-level="5.8" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#exploring-and-comparing-resampling-distributions"><i class="fa fa-check"></i><b>5.8</b> Exploring and Comparing Resampling Distributions</a><ul style="display: none;">
+<li class="chapter" data-level="5.8.1" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#within-model"><i class="fa fa-check"></i><b>5.8.1</b> Within-Model</a></li>
+<li class="chapter" data-level="5.8.2" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#between-models"><i class="fa fa-check"></i><b>5.8.2</b> Between-Models</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#fitting-models-without-parameter-tuning"><i class="fa fa-check"></i><b>5.9</b> Fitting Models Without Parameter Tuning</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="available-models.html"><a href="http://topepo.github.io/caret/available-models.html"><i class="fa fa-check"></i><b>6</b> Available Models</a></li>
+<li class="chapter" data-level="7" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html"><i class="fa fa-check"></i><b>7</b> <code>train</code> Models By Tag</a><ul style="display: none;">
+<li class="chapter" data-level="7.0.1" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#accepts-case-weights"><i class="fa fa-check"></i><b>7.0.1</b> Accepts Case Weights</a></li>
+<li class="chapter" data-level="7.0.2" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#bagging"><i class="fa fa-check"></i><b>7.0.2</b> Bagging</a></li>
+<li class="chapter" data-level="7.0.3" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#bayesian-model"><i class="fa fa-check"></i><b>7.0.3</b> Bayesian Model</a></li>
+<li class="chapter" data-level="7.0.4" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#binary-predictors-only"><i class="fa fa-check"></i><b>7.0.4</b> Binary Predictors Only</a></li>
+<li class="chapter" data-level="7.0.5" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#boosting"><i class="fa fa-check"></i><b>7.0.5</b> Boosting</a></li>
+<li class="chapter" data-level="7.0.6" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#categorical-predictors-only"><i class="fa fa-check"></i><b>7.0.6</b> Categorical Predictors Only</a></li>
+<li class="chapter" data-level="7.0.7" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#cost-sensitive-learning"><i class="fa fa-check"></i><b>7.0.7</b> Cost Sensitive Learning</a></li>
+<li class="chapter" data-level="7.0.8" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#discriminant-analysis"><i class="fa fa-check"></i><b>7.0.8</b> Discriminant Analysis</a></li>
+<li class="chapter" data-level="7.0.9" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#distance-weighted-discrimination"><i class="fa fa-check"></i><b>7.0.9</b> Distance Weighted Discrimination</a></li>
+<li class="chapter" data-level="7.0.10" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#ensemble-model"><i class="fa fa-check"></i><b>7.0.10</b> Ensemble Model</a></li>
+<li class="chapter" data-level="7.0.11" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#feature-extraction"><i class="fa fa-check"></i><b>7.0.11</b> Feature Extraction</a></li>
+<li class="chapter" data-level="7.0.12" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#feature-selection-wrapper"><i class="fa fa-check"></i><b>7.0.12</b> Feature Selection Wrapper</a></li>
+<li class="chapter" data-level="7.0.13" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#gaussian-process"><i class="fa fa-check"></i><b>7.0.13</b> Gaussian Process</a></li>
+<li class="chapter" data-level="7.0.14" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#generalized-additive-model"><i class="fa fa-check"></i><b>7.0.14</b> Generalized Additive Model</a></li>
+<li class="chapter" data-level="7.0.15" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#generalized-linear-model"><i class="fa fa-check"></i><b>7.0.15</b> Generalized Linear Model</a></li>
+<li class="chapter" data-level="7.0.16" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#handle-missing-predictor-data"><i class="fa fa-check"></i><b>7.0.16</b> Handle Missing Predictor Data</a></li>
+<li class="chapter" data-level="7.0.17" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#implicit-feature-selection"><i class="fa fa-check"></i><b>7.0.17</b> Implicit Feature Selection</a></li>
+<li class="chapter" data-level="7.0.18" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#kernel-method"><i class="fa fa-check"></i><b>7.0.18</b> Kernel Method</a></li>
+<li class="chapter" data-level="7.0.19" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#l1-regularization"><i class="fa fa-check"></i><b>7.0.19</b> L1 Regularization</a></li>
+<li class="chapter" data-level="7.0.20" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#l2-regularization"><i class="fa fa-check"></i><b>7.0.20</b> L2 Regularization</a></li>
+<li class="chapter" data-level="7.0.21" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#linear-classifier"><i class="fa fa-check"></i><b>7.0.21</b> Linear Classifier</a></li>
+<li class="chapter" data-level="7.0.22" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#linear-regression"><i class="fa fa-check"></i><b>7.0.22</b> Linear Regression</a></li>
+<li class="chapter" data-level="7.0.23" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#logic-regression"><i class="fa fa-check"></i><b>7.0.23</b> Logic Regression</a></li>
+<li class="chapter" data-level="7.0.24" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#logistic-regression"><i class="fa fa-check"></i><b>7.0.24</b> Logistic Regression</a></li>
+<li class="chapter" data-level="7.0.25" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#mixture-model"><i class="fa fa-check"></i><b>7.0.25</b> Mixture Model</a></li>
+<li class="chapter" data-level="7.0.26" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#model-tree"><i class="fa fa-check"></i><b>7.0.26</b> Model Tree</a></li>
+<li class="chapter" data-level="7.0.27" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#multivariate-adaptive-regression-splines"><i class="fa fa-check"></i><b>7.0.27</b> Multivariate Adaptive Regression Splines</a></li>
+<li class="chapter" data-level="7.0.28" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#neural-network"><i class="fa fa-check"></i><b>7.0.28</b> Neural Network</a></li>
+<li class="chapter" data-level="7.0.29" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#oblique-tree"><i class="fa fa-check"></i><b>7.0.29</b> Oblique Tree</a></li>
+<li class="chapter" data-level="7.0.30" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#ordinal-outcomes"><i class="fa fa-check"></i><b>7.0.30</b> Ordinal Outcomes</a></li>
+<li class="chapter" data-level="7.0.31" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#partial-least-squares"><i class="fa fa-check"></i><b>7.0.31</b> Partial Least Squares</a></li>
+<li class="chapter" data-level="7.0.32" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#patient-rule-induction-method"><i class="fa fa-check"></i><b>7.0.32</b> Patient Rule Induction Method</a></li>
+<li class="chapter" data-level="7.0.33" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#polynomial-model"><i class="fa fa-check"></i><b>7.0.33</b> Polynomial Model</a></li>
+<li class="chapter" data-level="7.0.34" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#prototype-models"><i class="fa fa-check"></i><b>7.0.34</b> Prototype Models</a></li>
+<li class="chapter" data-level="7.0.35" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#quantile-regression"><i class="fa fa-check"></i><b>7.0.35</b> Quantile Regression</a></li>
+<li class="chapter" data-level="7.0.36" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#radial-basis-function"><i class="fa fa-check"></i><b>7.0.36</b> Radial Basis Function</a></li>
+<li class="chapter" data-level="7.0.37" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#random-forest"><i class="fa fa-check"></i><b>7.0.37</b> Random Forest</a></li>
+<li class="chapter" data-level="7.0.38" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#regularization"><i class="fa fa-check"></i><b>7.0.38</b> Regularization</a></li>
+<li class="chapter" data-level="7.0.39" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#relevance-vector-machines"><i class="fa fa-check"></i><b>7.0.39</b> Relevance Vector Machines</a></li>
+<li class="chapter" data-level="7.0.40" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#ridge-regression"><i class="fa fa-check"></i><b>7.0.40</b> Ridge Regression</a></li>
+<li class="chapter" data-level="7.0.41" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#robust-methods"><i class="fa fa-check"></i><b>7.0.41</b> Robust Methods</a></li>
+<li class="chapter" data-level="7.0.42" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#robust-model"><i class="fa fa-check"></i><b>7.0.42</b> Robust Model</a></li>
+<li class="chapter" data-level="7.0.43" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#roc-curves"><i class="fa fa-check"></i><b>7.0.43</b> ROC Curves</a></li>
+<li class="chapter" data-level="7.0.44" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#rule-based-model"><i class="fa fa-check"></i><b>7.0.44</b> Rule-Based Model</a></li>
+<li class="chapter" data-level="7.0.45" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#self-organising-maps"><i class="fa fa-check"></i><b>7.0.45</b> Self-Organising Maps</a></li>
+<li class="chapter" data-level="7.0.46" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#string-kernel"><i class="fa fa-check"></i><b>7.0.46</b> String Kernel</a></li>
+<li class="chapter" data-level="7.0.47" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#support-vector-machines"><i class="fa fa-check"></i><b>7.0.47</b> Support Vector Machines</a></li>
+<li class="chapter" data-level="7.0.48" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#text-mining"><i class="fa fa-check"></i><b>7.0.48</b> Text Mining</a></li>
+<li class="chapter" data-level="7.0.49" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#tree-based-model"><i class="fa fa-check"></i><b>7.0.49</b> Tree-Based Model</a></li>
+<li class="chapter" data-level="7.0.50" data-path="train-models-by-tag.html"><a href="http://topepo.github.io/caret/train-models-by-tag.html#two-class-only"><i class="fa fa-check"></i><b>7.0.50</b> Two Class Only</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="models-clustered-by-tag-similarity.html"><a href="http://topepo.github.io/caret/models-clustered-by-tag-similarity.html"><i class="fa fa-check"></i><b>8</b> Models Clustered by Tag Similarity</a></li>
+<li class="chapter" data-level="9" data-path="parallel-processing.html"><a href="http://topepo.github.io/caret/parallel-processing.html"><i class="fa fa-check"></i><b>9</b> Parallel Processing</a></li>
+<li class="chapter" data-level="10" data-path="random-hyperparameter-search.html"><a href="http://topepo.github.io/caret/random-hyperparameter-search.html"><i class="fa fa-check"></i><b>10</b> Random Hyperparameter Search</a></li>
+<li class="chapter" data-level="11" data-path="subsampling-for-class-imbalances.html"><a href="http://topepo.github.io/caret/subsampling-for-class-imbalances.html"><i class="fa fa-check"></i><b>11</b> Subsampling For Class Imbalances</a><ul style="display: none;">
+<li class="chapter" data-level="11.1" data-path="subsampling-for-class-imbalances.html"><a href="http://topepo.github.io/caret/subsampling-for-class-imbalances.html#subsampling-techniques"><i class="fa fa-check"></i><b>11.1</b> Subsampling Techniques</a></li>
+<li class="chapter" data-level="11.2" data-path="subsampling-for-class-imbalances.html"><a href="http://topepo.github.io/caret/subsampling-for-class-imbalances.html#subsampling-during-resampling"><i class="fa fa-check"></i><b>11.2</b> Subsampling During Resampling</a></li>
+<li class="chapter" data-level="11.3" data-path="subsampling-for-class-imbalances.html"><a href="http://topepo.github.io/caret/subsampling-for-class-imbalances.html#complications"><i class="fa fa-check"></i><b>11.3</b> Complications</a></li>
+<li class="chapter" data-level="11.4" data-path="subsampling-for-class-imbalances.html"><a href="http://topepo.github.io/caret/subsampling-for-class-imbalances.html#using-custom-subsampling-techniques"><i class="fa fa-check"></i><b>11.4</b> Using Custom Subsampling Techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="using-recipes-with-train.html"><a href="http://topepo.github.io/caret/using-recipes-with-train.html"><i class="fa fa-check"></i><b>12</b> Using Recipes with train</a><ul style="display: none;">
+<li class="chapter" data-level="12.1" data-path="using-recipes-with-train.html"><a href="http://topepo.github.io/caret/using-recipes-with-train.html#why-should-you-learn-this"><i class="fa fa-check"></i><b>12.1</b> Why Should you learn this?</a><ul style="display: none;">
+<li class="chapter" data-level="12.1.1" data-path="using-recipes-with-train.html"><a href="http://topepo.github.io/caret/using-recipes-with-train.html#more-versatile-tools-for-preprocessing-data"><i class="fa fa-check"></i><b>12.1.1</b> More versatile tools for preprocessing data</a></li>
+<li class="chapter" data-level="12.1.2" data-path="using-recipes-with-train.html"><a href="http://topepo.github.io/caret/using-recipes-with-train.html#using-additional-data-to-measure-performance"><i class="fa fa-check"></i><b>12.1.2</b> Using additional data to measure performance</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="using-recipes-with-train.html"><a href="http://topepo.github.io/caret/using-recipes-with-train.html#an-example-1"><i class="fa fa-check"></i><b>12.2</b> An Example</a></li>
+<li class="chapter" data-level="12.3" data-path="using-recipes-with-train.html"><a href="http://topepo.github.io/caret/using-recipes-with-train.html#case-weights"><i class="fa fa-check"></i><b>12.3</b> Case Weights</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html"><i class="fa fa-check"></i><b>13</b> Using Your Own Model in <code>train</code></a><ul style="display: none;">
+<li class="chapter" data-level="13.1" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#introduction-1"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.2" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#illustrative-example-1-svms-with-laplacian-kernels"><i class="fa fa-check"></i><b>13.2</b> Illustrative Example 1: SVMs with Laplacian Kernels</a></li>
+<li class="chapter" data-level="13.3" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#model-components"><i class="fa fa-check"></i><b>13.3</b> Model Components</a><ul style="display: none;">
+<li class="chapter" data-level="13.3.1" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#the-parameters-element"><i class="fa fa-check"></i><b>13.3.1</b> The parameters Element</a></li>
+<li class="chapter" data-level="13.3.2" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#the-grid-element"><i class="fa fa-check"></i><b>13.3.2</b> The <code>grid</code> Element</a></li>
+<li class="chapter" data-level="13.3.3" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#the-fit-element"><i class="fa fa-check"></i><b>13.3.3</b> The <code>fit</code> Element</a></li>
+<li class="chapter" data-level="13.3.4" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#the-predict-element"><i class="fa fa-check"></i><b>13.3.4</b> The <code>predict</code> Element</a></li>
+<li class="chapter" data-level="13.3.5" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#the-prob-element"><i class="fa fa-check"></i><b>13.3.5</b> The <code>prob</code> Element</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#the-sort-element"><i class="fa fa-check"></i><b>13.4</b> The sort Element</a><ul style="display: none;">
+<li class="chapter" data-level="13.4.1" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#the-levels-element"><i class="fa fa-check"></i><b>13.4.1</b> The <code>levels</code> Element</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#illustrative-example-2-something-more-complicated---logitboost"><i class="fa fa-check"></i><b>13.5</b> Illustrative Example 2: Something More Complicated - <code>LogitBoost</code></a><ul style="display: none;">
+<li class="chapter" data-level="13.5.1" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#the-loop-element"><i class="fa fa-check"></i><b>13.5.1</b> The loop Element</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#illustrative-example-3-nonstandard-formulas"><i class="fa fa-check"></i><b>13.6</b> Illustrative Example 3: Nonstandard Formulas</a></li>
+<li class="chapter" data-level="13.7" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#illustrative-example-4-pls-feature-extraction-pre-processing"><i class="fa fa-check"></i><b>13.7</b> Illustrative Example 4: PLS Feature Extraction Pre-Processing</a></li>
+<li class="chapter" data-level="13.8" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#illustrative-example-5-optimizing-probability-thresholds-for-class-imbalances"><i class="fa fa-check"></i><b>13.8</b> Illustrative Example 5: Optimizing probability thresholds for class imbalances</a></li>
+<li class="chapter" data-level="13.9" data-path="using-your-own-model-in-train.html"><a href="http://topepo.github.io/caret/using-your-own-model-in-train.html#illustrative-example-6-offsets-in-generalized-linear-models"><i class="fa fa-check"></i><b>13.9</b> Illustrative Example 6: Offsets in Generalized Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="adaptive-resampling.html"><a href="http://topepo.github.io/caret/adaptive-resampling.html"><i class="fa fa-check"></i><b>14</b> Adaptive Resampling</a></li>
+<li class="chapter" data-level="15" data-path="variable-importance.html"><a href="http://topepo.github.io/caret/variable-importance.html"><i class="fa fa-check"></i><b>15</b> Variable Importance</a><ul style="display: none;">
+<li class="chapter" data-level="15.1" data-path="variable-importance.html"><a href="http://topepo.github.io/caret/variable-importance.html#model-specific-metrics"><i class="fa fa-check"></i><b>15.1</b> Model Specific Metrics</a></li>
+<li class="chapter" data-level="15.2" data-path="variable-importance.html"><a href="http://topepo.github.io/caret/variable-importance.html#model-independent-metrics"><i class="fa fa-check"></i><b>15.2</b> Model Independent Metrics</a></li>
+<li class="chapter" data-level="15.3" data-path="variable-importance.html"><a href="http://topepo.github.io/caret/variable-importance.html#an-example-2"><i class="fa fa-check"></i><b>15.3</b> An Example</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html"><i class="fa fa-check"></i><b>16</b> Miscellaneous Model Functions</a><ul style="display: none;">
+<li class="chapter" data-level="16.1" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#yet-another-k-nearest-neighbor-function"><i class="fa fa-check"></i><b>16.1</b> Yet Another <em>k</em>-Nearest Neighbor Function</a></li>
+<li class="chapter" data-level="16.2" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#partial-least-squares-discriminant-analysis"><i class="fa fa-check"></i><b>16.2</b> Partial Least Squares Discriminant Analysis</a></li>
+<li class="chapter" data-level="16.3" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#bagged-mars-and-fda"><i class="fa fa-check"></i><b>16.3</b> Bagged MARS and FDA</a></li>
+<li class="chapter" data-level="16.4" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#bagging-1"><i class="fa fa-check"></i><b>16.4</b> Bagging</a><ul style="display: none;">
+<li class="chapter" data-level="16.4.1" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#the-fit-function"><i class="fa fa-check"></i><b>16.4.1</b> The <code>fit</code> Function</a></li>
+<li class="chapter" data-level="16.4.2" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#the-pred-function"><i class="fa fa-check"></i><b>16.4.2</b> The <code>pred</code> Function</a></li>
+<li class="chapter" data-level="16.4.3" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#the-aggregate-function"><i class="fa fa-check"></i><b>16.4.3</b> The <code>aggregate</code> Function</a></li>
+</ul></li>
+<li class="chapter" data-level="16.5" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#model-averaged-neural-networks"><i class="fa fa-check"></i><b>16.5</b> Model Averaged Neural Networks</a></li>
+<li class="chapter" data-level="16.6" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#neural-networks-with-a-principal-component-step"><i class="fa fa-check"></i><b>16.6</b> Neural Networks with a Principal Component Step</a></li>
+<li class="chapter" data-level="16.7" data-path="miscellaneous-model-functions.html"><a href="http://topepo.github.io/caret/miscellaneous-model-functions.html#independent-component-regression"><i class="fa fa-check"></i><b>16.7</b> Independent Component Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="measuring-performance.html"><a href="http://topepo.github.io/caret/measuring-performance.html"><i class="fa fa-check"></i><b>17</b> Measuring Performance</a><ul style="display: none;">
+<li class="chapter" data-level="17.1" data-path="measuring-performance.html"><a href="http://topepo.github.io/caret/measuring-performance.html#measures-for-regression"><i class="fa fa-check"></i><b>17.1</b> Measures for Regression</a></li>
+<li class="chapter" data-level="17.2" data-path="measuring-performance.html"><a href="http://topepo.github.io/caret/measuring-performance.html#measures-for-predicted-classes"><i class="fa fa-check"></i><b>17.2</b> Measures for Predicted Classes</a></li>
+<li class="chapter" data-level="17.3" data-path="measuring-performance.html"><a href="http://topepo.github.io/caret/measuring-performance.html#measures-for-class-probabilities"><i class="fa fa-check"></i><b>17.3</b> Measures for Class Probabilities</a></li>
+<li class="chapter" data-level="17.4" data-path="measuring-performance.html"><a href="http://topepo.github.io/caret/measuring-performance.html#lift-curves"><i class="fa fa-check"></i><b>17.4</b> Lift Curves</a></li>
+<li class="chapter" data-level="17.5" data-path="measuring-performance.html"><a href="http://topepo.github.io/caret/measuring-performance.html#calibration-curves"><i class="fa fa-check"></i><b>17.5</b> Calibration Curves</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="feature-selection-overview.html"><a href="http://topepo.github.io/caret/feature-selection-overview.html"><i class="fa fa-check"></i><b>18</b> Feature Selection Overview</a><ul style="display: none;">
+<li class="chapter" data-level="18.1" data-path="feature-selection-overview.html"><a href="http://topepo.github.io/caret/feature-selection-overview.html#models-with-built-in-feature-selection"><i class="fa fa-check"></i><b>18.1</b> Models with Built-In Feature Selection</a></li>
+<li class="chapter" data-level="18.2" data-path="feature-selection-overview.html"><a href="http://topepo.github.io/caret/feature-selection-overview.html#feature-selection-methods"><i class="fa fa-check"></i><b>18.2</b> Feature Selection Methods</a></li>
+<li class="chapter" data-level="18.3" data-path="feature-selection-overview.html"><a href="http://topepo.github.io/caret/feature-selection-overview.html#external-validation"><i class="fa fa-check"></i><b>18.3</b> External Validation</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="feature-selection-using-univariate-filters.html"><a href="http://topepo.github.io/caret/feature-selection-using-univariate-filters.html" title="19 Feature Selection using Univariate Filters"><i class="fa fa-check"></i><b>19</b> Feature Selection using Univariate Filters</a><ul style="display: none;">
+<li class="chapter" data-level="19.1" data-path="feature-selection-using-univariate-filters.html"><a href="http://topepo.github.io/caret/feature-selection-using-univariate-filters.html#univariate-filters"><i class="fa fa-check"></i><b>19.1</b> Univariate Filters</a></li>
+<li class="chapter" data-level="19.2" data-path="feature-selection-using-univariate-filters.html"><a href="http://topepo.github.io/caret/feature-selection-using-univariate-filters.html#basic-syntax"><i class="fa fa-check"></i><b>19.2</b> Basic Syntax</a><ul style="display: none;">
+<li class="chapter" data-level="19.2.1" data-path="feature-selection-using-univariate-filters.html"><a href="http://topepo.github.io/caret/feature-selection-using-univariate-filters.html#the-score-function"><i class="fa fa-check"></i><b>19.2.1</b> The <code>score</code> Function</a></li>
+<li class="chapter" data-level="19.2.2" data-path="feature-selection-using-univariate-filters.html"><a href="http://topepo.github.io/caret/feature-selection-using-univariate-filters.html#the-filter-function"><i class="fa fa-check"></i><b>19.2.2</b> The <code>filter</code> Function</a></li>
+<li class="chapter" data-level="19.2.3" data-path="feature-selection-using-univariate-filters.html"><a href="http://topepo.github.io/caret/feature-selection-using-univariate-filters.html#the-fit-function-1"><i class="fa fa-check"></i><b>19.2.3</b> The <code>fit</code> Function</a></li>
+<li class="chapter" data-level="19.2.4" data-path="feature-selection-using-univariate-filters.html"><a href="http://topepo.github.io/caret/feature-selection-using-univariate-filters.html#the-summary-and-pred-functions"><i class="fa fa-check"></i><b>19.2.4</b> The <code>summary</code> and <code>pred</code> Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="19.3" data-path="feature-selection-using-univariate-filters.html"><a href="http://topepo.github.io/caret/feature-selection-using-univariate-filters.html#the-example"><i class="fa fa-check"></i><b>19.3</b> The Example</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html"><i class="fa fa-check"></i><b>20</b> Recursive Feature Elimination</a><ul style="display: none;">
+<li class="chapter" data-level="20.1" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#backwards-selection"><i class="fa fa-check"></i><b>20.1</b> Backwards Selection</a></li>
+<li class="chapter" data-level="20.2" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#resampling-and-external-validation"><i class="fa fa-check"></i><b>20.2</b> Resampling and External Validation</a></li>
+<li class="chapter" data-level="20.3" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#recursive-feature-elimination-via-caret"><i class="fa fa-check"></i><b>20.3</b> Recursive Feature Elimination via </a><a href="http://cran.r-project.org/web/packages/caret/index.html"><code>caret</code></a></li>
+<li class="chapter" data-level="20.4" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#an-example-3"><i class="fa fa-check"></i><b>20.4</b> An Example</a></li>
+<li class="chapter" data-level="20.5" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#helper-functions"><i class="fa fa-check"></i><b>20.5</b> Helper Functions</a><ul style="display: none;">
+<li class="chapter" data-level="20.5.1" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#the-summary-function"><i class="fa fa-check"></i><b>20.5.1</b> The <code>summary</code> Function</a></li>
+<li class="chapter" data-level="20.5.2" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#the-fit-function-2"><i class="fa fa-check"></i><b>20.5.2</b> The <code>fit</code> Function</a></li>
+<li class="chapter" data-level="20.5.3" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#the-pred-function-1"><i class="fa fa-check"></i><b>20.5.3</b> The <code>pred</code> Function</a></li>
+<li class="chapter" data-level="20.5.4" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#the-rank-function"><i class="fa fa-check"></i><b>20.5.4</b> The <code>rank</code> Function</a></li>
+<li class="chapter" data-level="20.5.5" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#the-selectsize-function"><i class="fa fa-check"></i><b>20.5.5</b> The <code>selectSize</code> Function</a></li>
+<li class="chapter" data-level="20.5.6" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#the-selectvar-function"><i class="fa fa-check"></i><b>20.5.6</b> The <code>selectVar</code> Function</a></li>
+</ul></li>
+<li class="chapter" data-level="20.6" data-path="recursive-feature-elimination.html"><a href="http://topepo.github.io/caret/recursive-feature-elimination.html#the-example-1"><i class="fa fa-check"></i><b>20.6</b> The Example</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html" title="21 Feature Selection using Genetic Algorithms"><i class="fa fa-check"></i><b>21</b> Feature Selection using Genetic Algorithms</a><ul style="display: none;">
+<li class="chapter" data-level="21.1" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#genetic-algorithms"><i class="fa fa-check"></i><b>21.1</b> Genetic Algorithms</a></li>
+<li class="chapter" data-level="21.2" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#internal-and-external-performance-estimates"><i class="fa fa-check"></i><b>21.2</b> Internal and External Performance Estimates</a></li>
+<li class="chapter" data-level="21.3" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#basic-syntax-1"><i class="fa fa-check"></i><b>21.3</b> Basic Syntax</a></li>
+<li class="chapter" data-level="21.4" data-path="model-training-and-tuning.html"><a href="http://topepo.github.io/caret/model-training-and-tuning.html#example"><i class="fa fa-check"></i><b>21.4</b> Example</a></li>
+<li class="chapter" data-level="21.5" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#customizing-the-search"><i class="fa fa-check"></i><b>21.5</b> Customizing the Search</a><ul style="display: none;">
+<li class="chapter" data-level="21.5.1" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-fit-function-3"><i class="fa fa-check"></i><b>21.5.1</b> The <code>fit</code> Function</a></li>
+<li class="chapter" data-level="21.5.2" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-pred-function-2"><i class="fa fa-check"></i><b>21.5.2</b> The <code>pred</code> Function</a></li>
+<li class="chapter" data-level="21.5.3" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-fitness_intern-function"><i class="fa fa-check"></i><b>21.5.3</b> The <code>fitness_intern</code> Function</a></li>
+<li class="chapter" data-level="21.5.4" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-fitness_extern-function"><i class="fa fa-check"></i><b>21.5.4</b> The <code>fitness_extern</code> Function</a></li>
+<li class="chapter" data-level="21.5.5" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-initial-function"><i class="fa fa-check"></i><b>21.5.5</b> The <code>initial</code> Function</a></li>
+<li class="chapter" data-level="21.5.6" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-selection-function"><i class="fa fa-check"></i><b>21.5.6</b> The <code>selection</code> Function</a></li>
+<li class="chapter" data-level="21.5.7" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-crossover-function"><i class="fa fa-check"></i><b>21.5.7</b> The <code>crossover</code> Function</a></li>
+<li class="chapter" data-level="21.5.8" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-mutation-function"><i class="fa fa-check"></i><b>21.5.8</b> The <code>mutation</code> Function</a></li>
+<li class="chapter" data-level="21.5.9" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-selectiter-function"><i class="fa fa-check"></i><b>21.5.9</b> The <code>selectIter</code> Function</a></li>
+</ul></li>
+<li class="chapter" data-level="21.6" data-path="feature-selection-using-genetic-algorithms.html"><a href="http://topepo.github.io/caret/feature-selection-using-genetic-algorithms.html#the-example-revisited"><i class="fa fa-check"></i><b>21.6</b> The Example Revisited</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html" title="22 Feature Selection using Simulated Annealing"><i class="fa fa-check"></i><b>22</b> Feature Selection using Simulated Annealing</a><ul style="display: none;">
+<li class="chapter" data-level="22.1" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#simulated-annealing"><i class="fa fa-check"></i><b>22.1</b> Simulated Annealing</a></li>
+<li class="chapter" data-level="22.2" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#internal-and-external-performance-estimates-1"><i class="fa fa-check"></i><b>22.2</b> Internal and External Performance Estimates</a></li>
+<li class="chapter" data-level="22.3" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#basic-syntax-2"><i class="fa fa-check"></i><b>22.3</b> Basic Syntax</a></li>
+<li class="chapter" data-level="22.4" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#example-1"><i class="fa fa-check"></i><b>22.4</b> Example</a></li>
+<li class="chapter" data-level="22.5" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#customizing-the-search-1"><i class="fa fa-check"></i><b>22.5</b> Customizing the Search</a><ul style="display: none;">
+<li class="chapter" data-level="22.5.1" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#the-fit-function-4"><i class="fa fa-check"></i><b>22.5.1</b> The <code>fit</code> Function</a></li>
+<li class="chapter" data-level="22.5.2" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#the-pred-function-3"><i class="fa fa-check"></i><b>22.5.2</b> The <code>pred</code> Function</a></li>
+<li class="chapter" data-level="22.5.3" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#the-fitness_intern-function-1"><i class="fa fa-check"></i><b>22.5.3</b> The <code>fitness_intern</code> Function</a></li>
+<li class="chapter" data-level="22.5.4" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#the-fitness_extern-function-1"><i class="fa fa-check"></i><b>22.5.4</b> The <code>fitness_extern</code> Function</a></li>
+<li class="chapter" data-level="22.5.5" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#the-initial-function-1"><i class="fa fa-check"></i><b>22.5.5</b> The <code>initial</code> Function</a></li>
+<li class="chapter" data-level="22.5.6" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#the-perturb-function"><i class="fa fa-check"></i><b>22.5.6</b> The <code>perturb</code> Function</a></li>
+<li class="chapter" data-level="22.5.7" data-path="feature-selection-using-simulated-annealing.html"><a href="http://topepo.github.io/caret/feature-selection-using-simulated-annealing.html#the-prob-function"><i class="fa fa-check"></i><b>22.5.7</b> The <code>prob</code> Function</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html"><i class="fa fa-check"></i><b>23</b> Data Sets</a><ul style="display: none;">
+<li class="chapter" data-level="23.1" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#blood-brain-barrier-data"><i class="fa fa-check"></i><b>23.1</b> Blood-Brain Barrier Data</a></li>
+<li class="chapter" data-level="23.2" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#cox-2-activity-data"><i class="fa fa-check"></i><b>23.2</b> COX-2 Activity Data</a></li>
+<li class="chapter" data-level="23.3" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#dhfr-inhibition"><i class="fa fa-check"></i><b>23.3</b> DHFR Inhibition</a></li>
+<li class="chapter" data-level="23.4" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#tecator-nir-data"><i class="fa fa-check"></i><b>23.4</b> Tecator NIR Data</a></li>
+<li class="chapter" data-level="23.5" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#fatty-acid-composition-data"><i class="fa fa-check"></i><b>23.5</b> Fatty Acid Composition Data</a></li>
+<li class="chapter" data-level="23.6" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#german-credit-data"><i class="fa fa-check"></i><b>23.6</b> German Credit Data</a></li>
+<li class="chapter" data-level="23.7" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#kelly-blue-book"><i class="fa fa-check"></i><b>23.7</b> Kelly Blue Book</a></li>
+<li class="chapter" data-level="23.8" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#cell-body-segmentation-data"><i class="fa fa-check"></i><b>23.8</b> Cell Body Segmentation Data</a></li>
+<li class="chapter" data-level="23.9" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#sacramento-house-price-data"><i class="fa fa-check"></i><b>23.9</b> Sacramento House Price Data</a></li>
+<li class="chapter" data-level="23.10" data-path="data-sets.html"><a href="http://topepo.github.io/caret/data-sets.html#animal-scat-data"><i class="fa fa-check"></i><b>23.10</b> Animal Scat Data</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="session-information.html"><a href="http://topepo.github.io/caret/session-information.html"><i class="fa fa-check"></i><b>24</b> Session Information</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body fixed">
+      <div class="body-inner">
+        <div class="book-header fixed" role="navigation" style="background-color: rgb(255, 255, 255);">
+          <a class="btn pull-left js-toolbar-action" aria-label="" href="http://topepo.github.io/caret/visualizations.html#"><i class="fa fa-align-justify"></i></a><a class="btn pull-left js-toolbar-action" aria-label="Search" href="http://topepo.github.io/caret/visualizations.html#"><i class="fa fa-search"></i></a><div class="dropdown pull-right  js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Share" href="http://topepo.github.io/caret/visualizations.html#"><i class="fa fa-share-alt"></i></a><div class="dropdown-menu dropdown-left"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-5 ">Facebook</button><button class="button size-5 ">Google+</button><button class="button size-5 ">Twitter</button><button class="button size-5 ">Weibo</button><button class="button size-5 ">Instapaper</button></div></div></div><a class="btn pull-right js-toolbar-action" aria-label="" href="http://topepo.github.io/caret/visualizations.html#"><i class="fa fa-facebook"></i></a><a class="btn pull-right js-toolbar-action" aria-label="" href="http://topepo.github.io/caret/visualizations.html#"><i class="fa fa-twitter"></i></a><div class="dropdown pull-left font-settings js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Font Settings" href="http://topepo.github.io/caret/visualizations.html#"><i class="fa fa-font"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div><div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div><div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div></div></div><h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="http://topepo.github.io/caret/">The <code>caret</code> Package</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="visualizations" class="section level1">
+<h1><span class="header-section-number">2</span> Visualizations</h1>
+<p>The <code>featurePlot</code> function is a wrapper for different <a href="http://cran.r-project.org/web/packages/lattice/index.html"><code>lattice</code></a> plots to visualize the data. For example, the following figures show the default plot for continuous outcomes generated using the <code>featurePlot</code> function.</p>
+<p>For classification data sets, the <code>iris</code> data are used for illustration.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(iris)</code></pre></div>
+<pre><code>## 'data.frame':    150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p><strong>Scatterplot Matrix</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(AppliedPredictiveModeling)
+<span class="kw">transparentTheme</span>(<span class="dt">trans =</span> .<span class="dv">4</span>)
+<span class="kw">library</span>(caret)
+<span class="kw">featurePlot</span>(<span class="dt">x =</span> iris[, <span class="dv">1</span>:<span class="dv">4</span>], 
+            <span class="dt">y =</span> iris$Species, 
+            <span class="dt">plot =</span> <span class="st">"pairs"</span>,
+            ## Add a key at the top
+            <span class="dt">auto.key =</span> <span class="kw">list</span>(<span class="dt">columns =</span> <span class="dv">3</span>))</code></pre></div>
+<p><img src="./Visualization_files/VisScatMat-1.png" width="624"></p>
+<p><strong>Scatterplot Matrix with Ellipses</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">featurePlot</span>(<span class="dt">x =</span> iris[, <span class="dv">1</span>:<span class="dv">4</span>], 
+            <span class="dt">y =</span> iris$Species, 
+            <span class="dt">plot =</span> <span class="st">"ellipse"</span>,
+            ## Add a key at the top
+            <span class="dt">auto.key =</span> <span class="kw">list</span>(<span class="dt">columns =</span> <span class="dv">3</span>))</code></pre></div>
+<p><img src="./Visualization_files/VisScatMatEl-1.png" width="624"></p>
+<p><strong>Overlayed Density Plots</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">transparentTheme</span>(<span class="dt">trans =</span> .<span class="dv">9</span>)
+<span class="kw">featurePlot</span>(<span class="dt">x =</span> iris[, <span class="dv">1</span>:<span class="dv">4</span>], 
+            <span class="dt">y =</span> iris$Species,
+            <span class="dt">plot =</span> <span class="st">"density"</span>, 
+            ## Pass in options to xyplot() to 
+            ## make it prettier
+            <span class="dt">scales =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="kw">list</span>(<span class="dt">relation=</span><span class="st">"free"</span>), 
+                          <span class="dt">y =</span> <span class="kw">list</span>(<span class="dt">relation=</span><span class="st">"free"</span>)), 
+            <span class="dt">adjust =</span> <span class="fl">1.5</span>, 
+            <span class="dt">pch =</span> <span class="st">"|"</span>, 
+            <span class="dt">layout =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">1</span>), 
+            <span class="dt">auto.key =</span> <span class="kw">list</span>(<span class="dt">columns =</span> <span class="dv">3</span>))</code></pre></div>
+<p><img src="./Visualization_files/VisDens-1.png" width="864"></p>
+<p><strong>Box Plots</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">featurePlot</span>(<span class="dt">x =</span> iris[, <span class="dv">1</span>:<span class="dv">4</span>], 
+            <span class="dt">y =</span> iris$Species, 
+            <span class="dt">plot =</span> <span class="st">"box"</span>, 
+            ## Pass in options to bwplot() 
+            <span class="dt">scales =</span> <span class="kw">list</span>(<span class="dt">y =</span> <span class="kw">list</span>(<span class="dt">relation=</span><span class="st">"free"</span>),
+                          <span class="dt">x =</span> <span class="kw">list</span>(<span class="dt">rot =</span> <span class="dv">90</span>)),  
+            <span class="dt">layout =</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">1</span> ), 
+            <span class="dt">auto.key =</span> <span class="kw">list</span>(<span class="dt">columns =</span> <span class="dv">2</span>))</code></pre></div>
+<p><img src="./Visualization_files/ViBox-1.png" width="864"></p>
+<p><strong>Scatter Plots</strong></p>
+<p>For regression, the Boston Housing data is used:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(mlbench)
+<span class="kw">data</span>(BostonHousing)
+regVar &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"age"</span>, <span class="st">"lstat"</span>, <span class="st">"tax"</span>)
+<span class="kw">str</span>(BostonHousing[, regVar])</code></pre></div>
+<pre><code>## 'data.frame':    506 obs. of  3 variables:
+##  $ age  : num  65.2 78.9 61.1 45.8 54.2 58.7 66.6 96.1 100 85.9 ...
+##  $ lstat: num  4.98 9.14 4.03 2.94 5.33 ...
+##  $ tax  : num  296 242 242 222 222 222 311 311 311 311 ...</code></pre>
+<p>When the predictors are continuous, <code>featurePlot</code> can be used to create scatter plots of each of the predictors with the outcome. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">theme1 &lt;-<span class="st"> </span><span class="kw">trellis.par.get</span>()
+theme1$plot.symbol$col =<span class="st"> </span><span class="kw">rgb</span>(.<span class="dv">2</span>, .<span class="dv">2</span>, .<span class="dv">2</span>, .<span class="dv">4</span>)
+theme1$plot.symbol$pch =<span class="st"> </span><span class="dv">16</span>
+theme1$plot.line$col =<span class="st"> </span><span class="kw">rgb</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, .<span class="dv">7</span>)
+theme1$plot.line$lwd &lt;-<span class="st"> </span><span class="dv">2</span>
+<span class="kw">trellis.par.set</span>(theme1)
+<span class="kw">featurePlot</span>(<span class="dt">x =</span> BostonHousing[, regVar], 
+            <span class="dt">y =</span> BostonHousing$medv, 
+            <span class="dt">plot =</span> <span class="st">"scatter"</span>, 
+            <span class="dt">layout =</span> <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">1</span>))</code></pre></div>
+<p><img src="./Visualization_files/VisScatter-1.png" width="864"></p>
+<p>Note that the x-axis scales are different. The function automatically uses <code>scales = list(y = list(relation = "free"))</code> so you don’t have to add it. We can also pass in options to the <a href="http://cran.r-project.org/web/packages/lattice/index.html"><code>lattice</code></a> function <code>xyplot</code>. For example, we can add a scatter plot smoother by passing in new options:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">featurePlot</span>(<span class="dt">x =</span> BostonHousing[, regVar], 
+            <span class="dt">y =</span> BostonHousing$medv, 
+            <span class="dt">plot =</span> <span class="st">"scatter"</span>,
+            <span class="dt">type =</span> <span class="kw">c</span>(<span class="st">"p"</span>, <span class="st">"smooth"</span>),
+            <span class="dt">span =</span> .<span class="dv">5</span>,
+            <span class="dt">layout =</span> <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">1</span>))</code></pre></div>
+<p><img src="./Visualization_files/VisScatterSmooth-1.png" width="864"></p>
+<p>The options <code>degree</code> and <code>span</code> control the smoothness of the smoother.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="http://topepo.github.io/caret/index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="http://topepo.github.io/caret/pre-processing.html" class="navigation navigation-next " aria-label="Next page" style="margin-right: 17px;"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="./Visualization_files/app.min.js.download"></script>
+<script src="./Visualization_files/lunr.js.download"></script>
+<script src="./Visualization_files/plugin-search.js.download"></script>
+<script src="./Visualization_files/plugin-sharing.js.download"></script>
+<script src="./Visualization_files/plugin-fontsettings.js.download"></script>
+<script src="./Visualization_files/plugin-bookdown.js.download"></script>
+<script src="./Visualization_files/jquery.highlight.js.download"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+
+</body></html>
